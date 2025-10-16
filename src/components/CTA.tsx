@@ -30,8 +30,9 @@ const CTA = () => {
     <section className="py-32 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 gradient-primary opacity-95" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute inset-0 gradient-flow" style={{ opacity: 0.3 }} />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/30 rounded-full blur-3xl float-gentle" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/30 rounded-full blur-3xl float-gentle" style={{ animationDelay: '2.5s' }} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">

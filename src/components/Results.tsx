@@ -43,9 +43,9 @@ const Results = () => {
   return (
     <section className="py-32 relative overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 gradient-primary opacity-5" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 gradient-flow-reverse" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl float-gentle" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl float-gentle" style={{ animationDelay: '1.5s' }} />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
@@ -66,7 +66,7 @@ const Results = () => {
         <div className="max-w-6xl mx-auto mb-20">
           <div className="grid md:grid-cols-2 gap-6">
             {metrics.map((metric, index) => (
-              <Card key={index} className="p-8 border-border bg-card hover:shadow-soft transition-smooth">
+              <Card key={index} className="p-8 border-border bg-card hover:shadow-soft transition-smooth float-gentle" style={{ animationDelay: `${index * 0.3}s` }}>
                 <div className="mb-4">
                   <h3 className="font-bold text-foreground mb-1">{metric.label}</h3>
                 </div>
@@ -102,7 +102,8 @@ const Results = () => {
             {impactMetrics.map((item, index) => (
               <Card 
                 key={index}
-                className="p-8 bg-gradient-card border-primary/20 hover:border-primary/40 transition-smooth group text-center"
+                className="p-8 bg-gradient-card border-primary/20 hover:border-primary/40 transition-smooth group text-center float-gentle pulse-subtle"
+                style={{ animationDelay: `${index * 0.4}s` }}
               >
                 <div className="mb-4">
                   <div className="text-5xl font-black gradient-text mb-2 group-hover:scale-110 transition-bounce">

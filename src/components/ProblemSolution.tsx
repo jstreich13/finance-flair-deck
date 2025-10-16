@@ -38,8 +38,9 @@ const ProblemSolution = () => {
   return (
     <section className="py-32 bg-muted/30 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 gradient-flow-slow" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl float-gentle" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl float-gentle" style={{ animationDelay: '3s' }} />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
@@ -61,7 +62,8 @@ const ProblemSolution = () => {
           {comparisonData.map((item, index) => (
             <Card 
               key={index} 
-              className="p-6 border-border bg-card hover:shadow-soft transition-smooth"
+              className="p-6 border-border bg-card hover:shadow-soft transition-smooth float-gentle"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="grid md:grid-cols-3 gap-6 items-center">
                 <div>

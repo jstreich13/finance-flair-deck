@@ -153,4 +153,86 @@ All colors MUST be HSL.
   .transition-bounce {
     transition: var(--transition-bounce);
   }
+  
+  /* Animated gradient backgrounds */
+  .gradient-flow {
+    background: linear-gradient(-45deg, 
+      hsl(250 95% 60% / 0.1), 
+      hsl(270 90% 65% / 0.1), 
+      hsl(210 100% 60% / 0.1), 
+      hsl(200 95% 55% / 0.1)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  .gradient-flow-slow {
+    background: linear-gradient(-45deg, 
+      hsl(250 95% 60% / 0.05), 
+      hsl(270 90% 65% / 0.05), 
+      hsl(210 100% 60% / 0.05), 
+      hsl(200 95% 55% / 0.05)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 25s ease infinite;
+  }
+  
+  .gradient-flow-reverse {
+    background: linear-gradient(45deg, 
+      hsl(200 95% 55% / 0.08), 
+      hsl(210 100% 60% / 0.08), 
+      hsl(270 90% 65% / 0.08), 
+      hsl(250 95% 60% / 0.08)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite reverse;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Floating animation for elements */
+  .float-gentle {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .float-gentle:nth-child(2n) {
+    animation-delay: -2s;
+  }
+  
+  .float-gentle:nth-child(3n) {
+    animation-delay: -4s;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Subtle pulse for interactive elements */
+  .pulse-subtle {
+    animation: pulseSubtle 4s ease-in-out infinite;
+  }
+  
+  @keyframes pulseSubtle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
 }
