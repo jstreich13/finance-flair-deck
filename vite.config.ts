@@ -5,6 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Set base to the repository name for GitHub Pages project site
+  base: '/finance-flair-deck/',
   server: {
     host: "::",
     port: 8080,
