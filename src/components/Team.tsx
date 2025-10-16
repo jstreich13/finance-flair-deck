@@ -3,16 +3,16 @@ import { Card } from "@/components/ui/card";
 const Team = () => {
   const founders = [
     {
-      name: "Sarah Chen",
+      name: "Jane Smith",
       role: "CEO & Co-Founder",
       bio: "Former Managing Director at Goldman Sachs. Led digital transformation for institutional banking. Stanford MBA, Series in Computer Science.",
       credentials: ["Goldman Sachs", "JP Morgan", "Stanford MBA"],
     },
     {
-      name: "Marcus Rodriguez",
+      name: "John Doe",
       role: "CTO & Co-Founder",
-      bio: "Ex-Head of Engineering at Coinbase. Built scalable systems for crypto trading platforms. MIT Computer Science, blockchain pioneer.",
-      credentials: ["Coinbase", "Robinhood", "MIT"],
+      bio: "Veteran engineering leader. Built scalable systems for high-volume trading platforms. MIT Computer Science, distributed systems expert.",
+      credentials: ["Robinhood", "MIT"],
     },
   ];
 
@@ -22,7 +22,6 @@ const Team = () => {
     "Paradigm",
     "Tiger Global",
     "Founders Fund",
-    "Coinbase Ventures",
   ];
 
   const partners = [
