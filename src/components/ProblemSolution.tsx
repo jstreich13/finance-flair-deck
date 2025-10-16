@@ -44,7 +44,7 @@ const ProblemSolution = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <div className="inline-block mb-6 px-4 py-2 rounded-full bg-gradient-card border border-primary/20">
-            <span className="text-primary font-bold text-sm">Traditional vs ShiftRx</span>
+            <span className="text-primary font-bold text-sm">Traditional vs our platform</span>
           </div>
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tighter">
             Stop wasting time on
@@ -80,7 +80,7 @@ const ProblemSolution = () => {
                 <div className="flex items-center gap-3">
                   <Check className="h-5 w-5 text-primary flex-shrink-0" />
                   <div>
-                    <div className="text-xs text-muted-foreground mb-1">ShiftRx</div>
+                    <div className="text-xs text-muted-foreground mb-1">our platform</div>
                     <div className="text-lg font-bold gradient-text">{item.shiftrx}</div>
                   </div>
                 </div>

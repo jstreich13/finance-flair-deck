@@ -58,7 +58,7 @@ const Results = () => {
             <span className="gradient-text">for themselves</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-medium">
-            Financial institutions using ShiftRx see immediate ROI
+            Financial institutions using our platform see immediate ROI
           </p>
         </div>
 

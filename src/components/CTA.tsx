@@ -41,7 +41,7 @@ const CTA = () => {
             your hiring?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-12 max-w-2xl mx-auto font-medium">
-            Join 500+ financial institutions using ShiftRx to deploy talent faster than ever.
+            Join 500+ financial institutions using our platform to deploy talent faster than ever.
           </p>
 
           {/* Email Form */}
