@@ -163,7 +163,7 @@ All colors MUST be HSL.
       hsl(200 95% 55% / 0.1)
     );
     background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    animation: gradientShift 30s ease infinite;
   }
   
   .gradient-flow-slow {
@@ -174,7 +174,7 @@ All colors MUST be HSL.
       hsl(200 95% 55% / 0.05)
     );
     background-size: 400% 400%;
-    animation: gradientShift 25s ease infinite;
+    animation: gradientShift 50s ease infinite;
   }
   
   .gradient-flow-reverse {
@@ -185,7 +185,7 @@ All colors MUST be HSL.
       hsl(250 95% 60% / 0.08)
     );
     background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite reverse;
+    animation: gradientShift 40s ease infinite reverse;
   }
   
   @keyframes gradientShift {
@@ -202,15 +202,15 @@ All colors MUST be HSL.
   
   /* Floating animation for elements */
   .float-gentle {
-    animation: float 6s ease-in-out infinite;
+    animation: float 12s ease-in-out infinite;
   }
   
   .float-gentle:nth-child(2n) {
-    animation-delay: -2s;
+    animation-delay: -4s;
   }
   
   .float-gentle:nth-child(3n) {
-    animation-delay: -4s;
+    animation-delay: -8s;
   }
   
   @keyframes float {
@@ -224,7 +224,7 @@ All colors MUST be HSL.
   
   /* Subtle pulse for interactive elements */
   .pulse-subtle {
-    animation: pulseSubtle 4s ease-in-out infinite;
+    animation: pulseSubtle 8s ease-in-out infinite;
   }
   
   @keyframes pulseSubtle {
