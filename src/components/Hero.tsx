@@ -1,70 +1,76 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-finance.jpg";
+import { ArrowRight, Sparkles } from "lucide-react";
+import heroImage from "@/assets/hero-fintech.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+      {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Modern financial services office" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 gradient-hero opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-4xl">
-          <div className="inline-block mb-6 px-4 py-2 rounded-full bg-secondary/20 border border-secondary/30 backdrop-blur-sm">
-            <span className="text-secondary font-medium text-sm">Trusted by Leading Financial Institutions</span>
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 mb-8 px-5 py-2.5 rounded-full bg-gradient-card border border-primary/20 backdrop-blur-sm animate-fade-in">
+            <Sparkles className="h-4 w-4 text-primary" />
+            <span className="text-sm font-semibold gradient-text">Trusted by 500+ Financial Institutions</span>
           </div>
           
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-primary-foreground mb-6 leading-tight">
-            Talent Smarter
+          {/* Main Heading */}
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black mb-8 leading-[0.95] tracking-tighter">
+            The future of
+            <br />
+            <span className="gradient-text">financial talent</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
-            Find qualified financial professionals for your team in hours, not weeks. 
-            AI-powered talent matching for banks, wealth management, and fintech.
+          {/* Subheading */}
+          <p className="text-xl sm:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+            AI-powered platform connecting financial institutions with verified, 
+            credentialed professionals. Deploy talent in hours, not weeks.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button 
               size="lg" 
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-gold text-lg px-8 py-6 transition-smooth"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow text-lg px-10 py-7 rounded-2xl font-bold transition-bounce hover:scale-105"
             >
-              Request Demo
+              Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6 backdrop-blur-sm transition-smooth"
+              className="border-2 border-foreground/10 hover:border-primary/50 text-lg px-10 py-7 rounded-2xl font-bold backdrop-blur-sm transition-smooth hover:bg-gradient-card"
             >
-              View Platform
+              Watch Demo
             </Button>
           </div>
 
-          {/* Trust Badges */}
-          <div className="mt-16 flex flex-wrap items-center gap-8 opacity-80">
-            <div className="text-primary-foreground/70 text-sm font-medium">
-              Official Partners:
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-8 border-t border-border/50">
+            <div>
+              <div className="text-4xl font-black gradient-text mb-2">7K+</div>
+              <div className="text-sm text-muted-foreground font-medium">Verified Professionals</div>
             </div>
-            <div className="flex flex-wrap gap-6 text-primary-foreground/60 text-sm font-semibold tracking-wide">
-              <span>GOLDMAN SACHS</span>
-              <span className="text-primary-foreground/30">|</span>
-              <span>JP MORGAN</span>
-              <span className="text-primary-foreground/30">|</span>
-              <span>MORGAN STANLEY</span>
+            <div>
+              <div className="text-4xl font-black gradient-text mb-2">90%</div>
+              <div className="text-sm text-muted-foreground font-medium">Time Reduction</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black gradient-text mb-2">24hrs</div>
+              <div className="text-sm text-muted-foreground font-medium">Average Fill Time</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Gradient Fade */}
+      {/* Bottom Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-0" />
     </section>
   );
