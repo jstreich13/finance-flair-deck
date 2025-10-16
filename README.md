@@ -1,73 +1,123 @@
-# Welcome to your Lovable project
+# Financial Talent Platform
 
-## Project info
+A modern, responsive web application built with React, TypeScript, and Tailwind CSS for showcasing financial talent solutions.
 
-**URL**: https://lovable.dev/projects/40c69ff6-fc54-4cc3-819a-aacb514bdbc3
+## Features
 
-## How can I edit this code?
+- **Modern UI/UX**: Clean, professional design with smooth animations
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Component Library**: Built with shadcn/ui components
+- **TypeScript**: Full type safety throughout the application
+- **Tailwind CSS**: Utility-first CSS framework for rapid styling
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, CSS Variables
+- **UI Components**: shadcn/ui, Radix UI primitives
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Deployment**: GitHub Pages
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/40c69ff6-fc54-4cc3-819a-aacb514bdbc3) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+ 
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository
+```bash
+git clone https://github.com/jstreich13/finance-flair-deck.git
+cd finance-flair-deck
+```
 
-Follow these steps:
+2. Install dependencies
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deploying as a static site
 
-## What technologies are used for this project?
+This project is configured to build as a standalone static website suitable for GitHub Pages, Netlify, Vercel (static export), Cloudflare Pages, S3/CloudFront, or any static host.
 
-This project is built with:
+### Build
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```sh
+npm run build
+```
 
-## How can I deploy this project?
+The output will be in `dist/`. A `404.html` is created automatically for SPA routing on GitHub Pages, and a Netlify `_redirects` file is included in `public/`.
 
-Simply open [Lovable](https://lovable.dev/projects/40c69ff6-fc54-4cc3-819a-aacb514bdbc3) and click on Share -> Publish.
+### Preview locally
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run preview
+```
 
-Yes, you can!
+### Upload to any static host
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Serve the contents of `dist/` at your domain or subpath. The Vite `base` is set to `./` so assets resolve correctly from subpaths.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### GitHub Pages
+
+1. Push this repository to GitHub.
+2. In GitHub, go to Settings → Pages.
+3. Set Source to Deploy from a branch → `gh-pages` (or use GitHub Actions to deploy `dist/`).
+4. Deploy the `dist/` folder. The `404.html` handles SPA routes.
+
+### Netlify
+
+- Drag-and-drop the `dist/` folder to Netlify, or
+- Create a new site from Git: build command `npm run build`, publish directory `dist/`.
+  The `_redirects` file ensures all routes serve `index.html`.
+
+### Vercel
+
+- Create a new project from this repo.
+- Set Framework Preset: Vite.
+- Build command: `npm run build`, Output directory: `dist/`.
+
+No server required. This is a static SPA build.
+
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ui/             # shadcn/ui components
+│   ├── CTA.tsx         # Call-to-action section
+│   ├── Features.tsx    # Features showcase
+│   ├── Hero.tsx        # Hero section
+│   ├── ProblemSolution.tsx # Problem/solution comparison
+│   ├── Results.tsx     # Results/metrics section
+│   └── Team.tsx        # Team and backers section
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+├── pages/              # Page components
+└── assets/             # Static assets
+```
+
+## Customization
+
+The design system is defined in `src/index.css` with CSS custom properties for colors, gradients, and animations. All components use Tailwind CSS classes and can be easily customized.
+
+## License
+
+This project is for demonstration purposes.
